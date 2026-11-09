@@ -197,19 +197,13 @@
             };
 
             const toggleSelectAllHistory = () => {
-                if (selectedHistoryIds.length === history.length) {
-                    setSelectedHistoryIds([]);
-                } else {
-                    setSelectedHistoryIds(history.map(h => h.id));
-                }
+                if (selectedHistoryIds.length === history.length) setSelectedHistoryIds([]);
+                else setSelectedHistoryIds(history.map(h => h.id));
             };
 
             const toggleHistorySelection = (id) => {
-                if (selectedHistoryIds.includes(id)) {
-                    setSelectedHistoryIds(selectedHistoryIds.filter(x => x !== id));
-                } else {
-                    setSelectedHistoryIds([...selectedHistoryIds, id]);
-                }
+                if (selectedHistoryIds.includes(id)) setSelectedHistoryIds(selectedHistoryIds.filter(x => x !== id));
+                else setSelectedHistoryIds([...selectedHistoryIds, id]);
             };
 
             const deleteSelectedHistory = () => {
